@@ -28,5 +28,5 @@ class GetConfigResponse extends \Aliyun\Log\Models\Response\Response {
     public function getConfig(){
         return $this->config;
     }
-
+   
 }

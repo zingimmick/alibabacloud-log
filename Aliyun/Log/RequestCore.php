@@ -77,11 +77,11 @@ class RequestCore
     /**
      * The default class to use for HTTP Requests (defaults to <RequestCore>).
      */
-    public $request_class = 'RequestCore';
+    public $request_class = 'Aliyun\Log\RequestCore';
     /**
      * The default class to use for HTTP Responses (defaults to <ResponseCore>).
      */
-    public $response_class = 'ResponseCore';
+    public $response_class = 'Aliyun\Log\ResponseCore';
     /**
      * Default useragent string to use.
      */
