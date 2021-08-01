@@ -1,4 +1,6 @@
+/build export-ignore
 /docs export-ignore
+/rectors export-ignore
 /sample export-ignore
 /tests export-ignore
 .gitattributes export-ignore
