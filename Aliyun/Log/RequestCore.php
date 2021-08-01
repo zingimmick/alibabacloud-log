@@ -618,7 +618,7 @@ class RequestCore
             $this->response = $response;
         }
         // As long as this came back as a valid resource...
-        if (\is_resource($curl_handle)) {
+        if (\is_resource($curl_handle) || $curl_handle instanceof \CurlHandle) {
             // Determine what's what.
             $header_size = \curl_getinfo($curl_handle, \CURLINFO_HEADER_SIZE);
             $this->response_headers = \substr($this->response, 0, $header_size);
@@ -659,7 +659,7 @@ class RequestCore
         $curl_handle = $this->prep_request();
         $this->response = \curl_exec($curl_handle);
         if ($this->response === \false) {
-            throw new \Aliyun\Log\RequestCoreException('cURL resource: ' . (string) $curl_handle . '; cURL error: ' . \curl_error($curl_handle) . ' (' . \curl_errno($curl_handle) . ')');
+            throw new \Aliyun\Log\RequestCoreException('cURL error: ' . \curl_error($curl_handle) . ' (' . \curl_errno($curl_handle) . ')');
         }
         $parsed_response = $this->process_response($curl_handle, $this->response);
         \curl_close($curl_handle);
