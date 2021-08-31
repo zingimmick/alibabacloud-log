@@ -1,15 +1,16 @@
 <?php
+namespace Aliyun\Log\Models\Response;
+
 /**
  * Copyright (C) Alibaba Cloud Computing
  * All rights reserved
  */
-
 /**
  * The QueriedLog is a log of the Aliyun_Log_Models_GetLogsResponse which obtained from the log.
  *
  * @author log service dev
  */
-class Aliyun_Log_Models_QueriedLog {
+class QueriedLog {
 
     /**
      * @var integer log timestamp
@@ -25,8 +26,8 @@ class Aliyun_Log_Models_QueriedLog {
      * @var array log contents, content many key/value pair
      */
     private $contents;
-    
-    
+
+
     /**
      * Aliyun_Log_Models_QueriedLog constructor
      *
@@ -42,7 +43,7 @@ class Aliyun_Log_Models_QueriedLog {
         $this->source = $source;
         $this->contents = $contents; // deep copy
     }
-    
+
     /**
      * Get log source
      *
@@ -51,7 +52,7 @@ class Aliyun_Log_Models_QueriedLog {
     public function getSource() {
         return $this->source;
     }
-    
+
     /**
      * Get log time
      *
@@ -60,7 +61,7 @@ class Aliyun_Log_Models_QueriedLog {
     public function getTime() {
         return $this->time;
     }
-    
+
     /**
      * Get log contents, content many key/value pair.
      *

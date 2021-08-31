@@ -1,17 +1,12 @@
 <?php
-/**
- * Copyright (C) Alibaba Cloud Computing
- * All rights reserved
- */
-
-require_once realpath(dirname(__FILE__) . '/Request.php');
+namespace Aliyun\Log\Models\Request;
 
 /**
- * 
+ *
  *
  * @author log service dev
  */
-class Aliyun_Log_Models_GetMachineGroupRequest extends Aliyun_Log_Models_Request {
+class GetMachineGroupRequest extends \Aliyun\Log\Models\Request\Request {
 
     private $groupName;
     /**
@@ -23,9 +18,9 @@ class Aliyun_Log_Models_GetMachineGroupRequest extends Aliyun_Log_Models_Request
     }
     public function getGroupName(){
         return $this->groupName;
-    } 
+    }
     public function setGroupName($groupName){
         $this->groupName = $groupName;
     }
-    
+
 }

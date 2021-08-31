@@ -1,17 +1,12 @@
 <?php
-/**
- * Copyright (C) Alibaba Cloud Computing
- * All rights reserved
- */
-
-require_once realpath(dirname(__FILE__) . '/Request.php');
+namespace Aliyun\Log\Models\Request;
 
 /**
- * 
+ *
  *
  * @author log service dev
  */
-class Aliyun_Log_Models_CreateConfigRequest extends Aliyun_Log_Models_Request {
+class CreateConfigRequest extends \Aliyun\Log\Models\Request\Request {
 
     private $config;
 
@@ -25,11 +20,11 @@ class Aliyun_Log_Models_CreateConfigRequest extends Aliyun_Log_Models_Request {
 
     public function getConfig(){
         return $this->config;
-        
+
     }
 
     public function setConfig($config){
         $this->config = $config;
     }
-    
+
 }

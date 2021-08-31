@@ -1,23 +1,18 @@
 <?php
-/**
- * Copyright (C) Alibaba Cloud Computing
- * All rights reserved
- */
-
-require_once realpath(dirname(__FILE__) . '/Request.php');
+namespace Aliyun\Log\Models\Request;
 
 /**
- * The request used to get cursor by fromTime or begin/end mode 
+ * The request used to get cursor by fromTime or begin/end mode
  *
  * @author log service dev
  */
-class Aliyun_Log_Models_GetCursorRequest extends Aliyun_Log_Models_Request {
-    
+class GetCursorRequest extends \Aliyun\Log\Models\Request\Request {
+
     /**
      * @var string logstore name
      */
     private $logstore;
-    
+
     /**
      * @var string shard id
      */
@@ -29,13 +24,13 @@ class Aliyun_Log_Models_GetCursorRequest extends Aliyun_Log_Models_Request {
      *         begin:return cursor point to first loggroup
      *         end:return cursor point to position after last loggroup
      *         if $mode is set to not null,$fromTime must be set null
-     */        
+     */
     private $mode;
-    
+
     /**
      * @var integer unix_timestamp
-     *         return cursor point to first loggroup whose time after $fromTime 
-     */        
+     *         return cursor point to first loggroup whose time after $fromTime
+     */
     private $fromTime;
 
     /**
@@ -47,7 +42,7 @@ class Aliyun_Log_Models_GetCursorRequest extends Aliyun_Log_Models_Request {
      * @param string $shardId
      *            shard id
      * @param string $mode
-     *            query mode,value must be 'begin' or 'end' 
+     *            query mode,value must be 'begin' or 'end'
      * @param string $fromTime
      *            query by from time,unix_timestamp
      */
@@ -67,7 +62,7 @@ class Aliyun_Log_Models_GetCursorRequest extends Aliyun_Log_Models_Request {
     public function getLogstore(){
       return $this->logstore;
     }
-    
+
     /**
      * Set logstore name
      *
@@ -86,7 +81,7 @@ class Aliyun_Log_Models_GetCursorRequest extends Aliyun_Log_Models_Request {
     public function getShardId(){
       return $this->shardId;
     }
-    
+
     /**
      * Set shard id
      *
@@ -105,10 +100,10 @@ class Aliyun_Log_Models_GetCursorRequest extends Aliyun_Log_Models_Request {
     public function getMode(){
       return $this->mode;
     }
-    
+
     /**
      * Set mode
-     *  
+     *
      * @param string $mode
      *            value must be 'begin' or 'end'
      */

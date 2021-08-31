@@ -1,25 +1,19 @@
 <?php
-/**
- * Copyright (C) Alibaba Cloud Computing
- * All rights reserved
- */
+namespace Aliyun\Log\Models\Response;
 
-require_once realpath(dirname(__FILE__) . '/Response.php');
-require_once realpath ( dirname ( __FILE__ ) . '/../../sls.proto.php' );
-require_once realpath ( dirname ( __FILE__ ) . '/../../protocolbuffers.inc.php' );
 /**
  * The response of the GetLog API from log service.
  *
  * @author log service dev
  */
-class Aliyun_Log_Models_BatchGetLogsResponse extends Aliyun_Log_Models_Response {
-    
+class BatchGetLogsResponse extends \Aliyun\Log\Models\Response\Response {
+
     /**
      * @var array compressed Loggroup array
      */
     private $logPackageList;
     private $nextCursor;
-    
+
     /**
      * Aliyun_Log_Models_BatchGetLogsResponse constructor
      *
@@ -32,7 +26,7 @@ class Aliyun_Log_Models_BatchGetLogsResponse extends Aliyun_Log_Models_Response 
         parent::__construct ( $header );
         $this->logPackageList = $resp->getLogGroupListArray();
         $this->nextCursor = (isset($header['x-log-cursor']))?$header['x-log-cursor']:null;
-        
+
     }
 
     public function getLogPackageList(){
@@ -52,7 +46,7 @@ class Aliyun_Log_Models_BatchGetLogsResponse extends Aliyun_Log_Models_Response 
             return $this->logPackageList[$index];
         }
         else{
-            throw new OutOfBoundsException('Index must less than size of logPackageList');
+            throw new \OutOfBoundsException('Index must less than size of logPackageList');
         }
     }
 
@@ -65,7 +59,7 @@ class Aliyun_Log_Models_BatchGetLogsResponse extends Aliyun_Log_Models_Response 
             return  $this->logPackageList[$index];
         }
         else{
-            throw new OutOfBoundsException('Index must less than size of logPackageList');
+            throw new \OutOfBoundsException('Index must less than size of logPackageList');
         }
     }
 
