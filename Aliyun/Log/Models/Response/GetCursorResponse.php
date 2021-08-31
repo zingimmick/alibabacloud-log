@@ -1,17 +1,12 @@
 <?php
-/**
- * Copyright (C) Alibaba Cloud Computing
- * All rights reserved
- */
-
-require_once realpath(dirname(__FILE__) . '/Response.php');
+namespace Aliyun\Log\Models\Response;
 
 /**
  * The response of the GetCursor API from log service.
  *
  * @author log service dev
  */
-class Aliyun_Log_Models_GetCursorResponse extends Aliyun_Log_Models_Response {
+class GetCursorResponse extends \Aliyun\Log\Models\Response\Response {
     /**
      * @var string cursor
      *
@@ -29,7 +24,7 @@ class Aliyun_Log_Models_GetCursorResponse extends Aliyun_Log_Models_Response {
         parent::__construct ( $header );
         $this->cursor = $resp['cursor'];
     }
-    
+
     /**
      * Get cursor from the response
      *
@@ -37,5 +32,5 @@ class Aliyun_Log_Models_GetCursorResponse extends Aliyun_Log_Models_Response {
      */
     public function getCursor(){
       return $this->cursor;
-    } 
+    }
 }

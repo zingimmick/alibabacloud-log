@@ -1,17 +1,12 @@
 <?php
-/**
- * Copyright (C) Alibaba Cloud Computing
- * All rights reserved
- */
-
-require_once realpath(dirname(__FILE__) . '/Request.php');
+namespace Aliyun\Log\Models\Request;
 
 /**
- * 
+ *
  *
  * @author log service dev
  */
-class Aliyun_Log_Models_SplitShardRequest extends Aliyun_Log_Models_Request {
+class SplitShardRequest extends \Aliyun\Log\Models\Request\Request {
 
     private $logstore;
 
@@ -40,5 +35,5 @@ class Aliyun_Log_Models_SplitShardRequest extends Aliyun_Log_Models_Request {
     public function getMidHash(){
         return $this->midHash;
     }
-    
+
 }

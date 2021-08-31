@@ -1,18 +1,13 @@
 <?php
-/**
- * Copyright (C) Alibaba Cloud Computing
- * All rights reserved
- */
-
-require_once realpath(dirname(__FILE__) . '/Response.php');
+namespace Aliyun\Log\Models\Response;
 
 /**
  * The response of the DeleteLogstore API from log service.
  *
  * @author log service dev
  */
-class Aliyun_Log_Models_DeleteLogstoreResponse extends Aliyun_Log_Models_Response {
-    
+class DeleteLogstoreResponse extends \Aliyun\Log\Models\Response\Response {
+
     /**
      * Aliyun_Log_Models_DeleteLogstoreResponse constructor
      *
@@ -24,5 +19,5 @@ class Aliyun_Log_Models_DeleteLogstoreResponse extends Aliyun_Log_Models_Respons
     public function __construct($resp, $header) {
         parent::__construct ( $header );
     }
-    
+
 }

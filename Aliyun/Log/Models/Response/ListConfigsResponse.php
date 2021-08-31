@@ -1,17 +1,12 @@
 <?php
-/**
- * Copyright (C) Alibaba Cloud Computing
- * All rights reserved
- */
-
-require_once realpath(dirname(__FILE__) . '/Response.php');
+namespace Aliyun\Log\Models\Response;
 
 /**
  *
  * @author log service dev
  */
-class Aliyun_Log_Models_ListConfigsResponse extends Aliyun_Log_Models_Response {
-    
+class ListConfigsResponse extends \Aliyun\Log\Models\Response\Response {
+
     private $total;
     private $configs;
     /**
@@ -25,7 +20,7 @@ class Aliyun_Log_Models_ListConfigsResponse extends Aliyun_Log_Models_Response {
     public function __construct($resp, $header) {
         parent::__construct ( $header );
         $this->size = $resp['total'];
-        $this->configs = $resp['configs']; 
+        $this->configs = $resp['configs'];
     }
 
     public function getSize(){
@@ -39,6 +34,6 @@ class Aliyun_Log_Models_ListConfigsResponse extends Aliyun_Log_Models_Response {
     public function getConfigs(){
       return $this->configs;
     }
-   
+
 
 }

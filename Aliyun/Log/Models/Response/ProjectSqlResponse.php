@@ -1,19 +1,13 @@
 <?php
-/**
- * Copyright (C) Alibaba Cloud Computing
- * All rights reserved
- */
-
-require_once realpath(dirname(__FILE__) . '/Response.php');
-require_once realpath(dirname(__FILE__) . '/QueriedLog.php');
+namespace Aliyun\Log\Models\Response;
 
 /**
  * The response of the execute sql API from log service.
  *
  * @author log service dev
  */
-class Aliyun_Log_Models_ProjectSqlResponse extends Aliyun_Log_Models_Response {
-    
+class ProjectSqlResponse extends \Aliyun\Log\Models\Response\Response {
+
     /**
      * @var integer log number
      */
@@ -48,8 +42,8 @@ class Aliyun_Log_Models_ProjectSqlResponse extends Aliyun_Log_Models_Response {
      * @var used cpu core number for this request
      */
     private $cpuCores;
-    
-    
+
+
     /**
      * Aliyun_Log_Models_GetLogsResponse constructor
      *
@@ -73,10 +67,10 @@ class Aliyun_Log_Models_ProjectSqlResponse extends Aliyun_Log_Models_Response {
             $source = $data ['__source__'];
             unset ( $contents ['__time__'] );
             unset ( $contents ['__source__'] );
-            $this->logs [] = new Aliyun_Log_Models_QueriedLog ( $time, $source, $contents );
+            $this->logs [] = new \Aliyun\Log\Models\Response\QueriedLog ( $time, $source, $contents );
         }
     }
-    
+
     /**
      * Get log number from the response
      *
@@ -85,7 +79,7 @@ class Aliyun_Log_Models_ProjectSqlResponse extends Aliyun_Log_Models_Response {
     public function getCount() {
         return $this->count;
     }
-    
+
     /**
      * Check if the get logs query is completed
      *
@@ -94,7 +88,7 @@ class Aliyun_Log_Models_ProjectSqlResponse extends Aliyun_Log_Models_Response {
     public function isCompleted() {
         return $this->progress == 'Complete';
     }
-    
+
     /**
      * Get all logs from the response
      *
