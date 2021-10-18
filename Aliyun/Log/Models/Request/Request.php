@@ -16,7 +16,7 @@ class Request {
      * @var string project name
      */
     private $project;
-
+    
     /**
      * Aliyun_Log_Models_Request constructor
      *
@@ -26,7 +26,7 @@ class Request {
     public function __construct($project) {
         $this->project = $project;
     }
-
+    
     /**
      * Get project name
      *
@@ -35,7 +35,7 @@ class Request {
     public function getProject() {
         return $this->project;
     }
-
+    
     /**
      * Set project name
      *

@@ -8,7 +8,7 @@ namespace Aliyun\Log\Models\Response;
  */
 class ListShardsResponse extends \Aliyun\Log\Models\Response\Response {
 
-    private $shardIds;
+    private $shardIds; 
     /**
      * Aliyun_Log_Models_ListShardsResponse constructor
      *
@@ -32,5 +32,5 @@ class ListShardsResponse extends \Aliyun\Log\Models\Response\Response {
     {
         return $this -> shards;
     }
-
+   
 }

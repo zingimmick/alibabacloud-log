@@ -2,12 +2,12 @@
 namespace Aliyun\Log\Models\Request;
 
 /**
- *
+ * 
  *
  * @author log service dev
  */
 class GetMachineRequest extends \Aliyun\Log\Models\Request\Request {
-
+    
     private $uuid;
 
     /**
@@ -25,5 +25,5 @@ class GetMachineRequest extends \Aliyun\Log\Models\Request\Request {
     public function setUuid($uuid){
         $this->uuid = $uuid;
     }
-
+    
 }

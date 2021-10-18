@@ -2,14 +2,14 @@
 namespace Aliyun\Log\Models\Request;
 
 /**
- *
+ * 
  *
  * @author log service dev
  */
 class DeleteMachineGroupRequest extends \Aliyun\Log\Models\Request\Request {
 
 
-    private $groupName;
+    private $groupName; 
     /**
      * Aliyun_Log_Models_DeleteMachineGroupRequest Constructor
      *
@@ -25,5 +25,5 @@ class DeleteMachineGroupRequest extends \Aliyun\Log\Models\Request\Request {
     public function setGroupName($groupName){
         $this->groupName = $groupName;
     }
-
+    
 }

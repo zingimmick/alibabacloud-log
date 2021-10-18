@@ -2,7 +2,7 @@
 namespace Aliyun\Log\Models\Request;
 
 /**
- *
+ * 
  *
  * @author log service dev
  */
@@ -35,5 +35,5 @@ class SplitShardRequest extends \Aliyun\Log\Models\Request\Request {
     public function getMidHash(){
         return $this->midHash;
     }
-
+    
 }

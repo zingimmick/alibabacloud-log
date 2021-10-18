@@ -8,22 +8,22 @@ namespace Aliyun\Log\Models\Response;
  * @author log service dev
  */
 class GetHistogramsResponse extends \Aliyun\Log\Models\Response\Response {
-
+    
     /**
      * @var string histogram query status(Complete or InComplete)
      */
     private $progress;
-
+    
     /**
      * @var integer logs' count that current query hits
      */
     private $count;
-
+    
     /**
      * @var array Aliyun_Log_Models_Histogram array, histograms on the requested time range: [from, to)
      */
     private $histograms; // List<Aliyun_Log_Models_Histogram>
-
+    
     /**
      * Aliyun_Log_Models_GetHistogramsResponse constructor
      *
@@ -40,7 +40,7 @@ class GetHistogramsResponse extends \Aliyun\Log\Models\Response\Response {
         foreach ( $resp  as $data )
             $this->histograms [] = new \Aliyun\Log\Models\Histogram ( $data ['from'], $data ['to'], $data ['count'], $data ['progress'] );
     }
-
+    
     /**
      * Check if the histogram is completed
      *
@@ -49,7 +49,7 @@ class GetHistogramsResponse extends \Aliyun\Log\Models\Response\Response {
     public function isCompleted() {
         return $this->progress == 'Complete';
     }
-
+    
     /**
      * Get total logs' count that current query hits
      *
@@ -58,7 +58,7 @@ class GetHistogramsResponse extends \Aliyun\Log\Models\Response\Response {
     public function getTotalCount() {
         return $this->count;
     }
-
+    
     /**
      * Get histograms on the requested time range: [from, to)
      *

@@ -7,7 +7,7 @@ namespace Aliyun\Log\Models\Response;
  * @author log service dev
  */
 class DeleteConfigResponse extends \Aliyun\Log\Models\Response\Response {
-
+    
     /**
      * Aliyun_Log_Models_DeleteConfigResponse constructor
      *

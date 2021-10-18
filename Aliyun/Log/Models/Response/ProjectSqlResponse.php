@@ -7,7 +7,7 @@ namespace Aliyun\Log\Models\Response;
  * @author log service dev
  */
 class ProjectSqlResponse extends \Aliyun\Log\Models\Response\Response {
-
+    
     /**
      * @var integer log number
      */
@@ -42,8 +42,8 @@ class ProjectSqlResponse extends \Aliyun\Log\Models\Response\Response {
      * @var used cpu core number for this request
      */
     private $cpuCores;
-
-
+    
+    
     /**
      * Aliyun_Log_Models_GetLogsResponse constructor
      *
@@ -70,7 +70,7 @@ class ProjectSqlResponse extends \Aliyun\Log\Models\Response\Response {
             $this->logs [] = new \Aliyun\Log\Models\Response\QueriedLog ( $time, $source, $contents );
         }
     }
-
+    
     /**
      * Get log number from the response
      *
@@ -79,7 +79,7 @@ class ProjectSqlResponse extends \Aliyun\Log\Models\Response\Response {
     public function getCount() {
         return $this->count;
     }
-
+    
     /**
      * Check if the get logs query is completed
      *
@@ -88,7 +88,7 @@ class ProjectSqlResponse extends \Aliyun\Log\Models\Response\Response {
     public function isCompleted() {
         return $this->progress == 'Complete';
     }
-
+    
     /**
      * Get all logs from the response
      *

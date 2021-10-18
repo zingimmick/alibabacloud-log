@@ -32,5 +32,5 @@ class ListSqlInstanceResponse extends \Aliyun\Log\Models\Response\Response {
             }
         }
     }
-
+    
 }

@@ -32,9 +32,9 @@ class ListMachineGroupsResponse extends \Aliyun\Log\Models\Response\Response {
 
     public function getSize(){
         return $this->size;
-    }
-
+    } 
+    
     public function getMachineGroups(){
         return $this->machineGroups;
-    }
+    } 
 }

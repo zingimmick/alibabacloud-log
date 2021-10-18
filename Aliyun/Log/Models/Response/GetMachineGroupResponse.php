@@ -26,6 +26,6 @@ class GetMachineGroupResponse extends \Aliyun\Log\Models\Response\Response {
 
     public function getMachineGroup(){
         return $this->machineGroup;
-    }
+    } 
 
 }

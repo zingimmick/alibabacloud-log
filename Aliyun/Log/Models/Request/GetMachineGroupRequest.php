@@ -2,7 +2,7 @@
 namespace Aliyun\Log\Models\Request;
 
 /**
- *
+ * 
  *
  * @author log service dev
  */
@@ -18,9 +18,9 @@ class GetMachineGroupRequest extends \Aliyun\Log\Models\Request\Request {
     }
     public function getGroupName(){
         return $this->groupName;
-    }
+    } 
     public function setGroupName($groupName){
         $this->groupName = $groupName;
     }
-
+    
 }

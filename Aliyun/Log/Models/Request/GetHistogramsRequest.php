@@ -17,23 +17,23 @@ class GetHistogramsRequest extends \Aliyun\Log\Models\Request\Request {
      * @var string topic name of logs
      */
     private $topic;
-
+    
     /**
      * @var integer the begin time
      */
     private $from;
-
+    
     /**
      * @var integer the end time
      */
     private $to;
-
+    
     /**
      * @var string user defined query
      */
     private $query;
-
-
+    
+    
     /**
      * Aliyun_Log_Models_GetHistogramsRequest constructor
      *
@@ -58,7 +58,7 @@ class GetHistogramsRequest extends \Aliyun\Log\Models\Request\Request {
         $this->topic = $topic;
         $this->query = $query;
     }
-
+    
     /**
      * Get logstore name
      *
@@ -67,7 +67,7 @@ class GetHistogramsRequest extends \Aliyun\Log\Models\Request\Request {
     public function getLogstore() {
         return $this->logstore;
     }
-
+    
     /**
      * Set logstore name
      *
@@ -77,7 +77,7 @@ class GetHistogramsRequest extends \Aliyun\Log\Models\Request\Request {
     public function setLogstore($logstore) {
         $this->logstore = $logstore;
     }
-
+    
     /**
      * Get topic name
      *
@@ -86,7 +86,7 @@ class GetHistogramsRequest extends \Aliyun\Log\Models\Request\Request {
     public function getTopic() {
         return $this->topic;
     }
-
+    
     /**
      * Set topic name
      *
@@ -96,7 +96,7 @@ class GetHistogramsRequest extends \Aliyun\Log\Models\Request\Request {
     public function setTopic($topic) {
         $this->topic = $topic;
     }
-
+    
     /**
      * Get begin time
      *
@@ -105,7 +105,7 @@ class GetHistogramsRequest extends \Aliyun\Log\Models\Request\Request {
     public function getFrom() {
         return $this->from;
     }
-
+    
     /**
      * Set begin time
      *
@@ -115,7 +115,7 @@ class GetHistogramsRequest extends \Aliyun\Log\Models\Request\Request {
     public function setFrom($from) {
         $this->from = $from;
     }
-
+    
     /**
      * Get end time
      *
@@ -124,7 +124,7 @@ class GetHistogramsRequest extends \Aliyun\Log\Models\Request\Request {
     public function getTo() {
         return $this->to;
     }
-
+    
     /**
      * Set end time
      *
@@ -134,7 +134,7 @@ class GetHistogramsRequest extends \Aliyun\Log\Models\Request\Request {
     public function setTo($to) {
         $this->to = $to;
     }
-
+    
     /**
      * Get user defined query
      *
@@ -143,7 +143,7 @@ class GetHistogramsRequest extends \Aliyun\Log\Models\Request\Request {
     public function getQuery() {
         return $this->query;
     }
-
+    
     /**
      * Set user defined query
      *

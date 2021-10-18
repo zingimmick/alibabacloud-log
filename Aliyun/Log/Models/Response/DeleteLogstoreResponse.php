@@ -7,7 +7,7 @@ namespace Aliyun\Log\Models\Response;
  * @author log service dev
  */
 class DeleteLogstoreResponse extends \Aliyun\Log\Models\Response\Response {
-
+    
     /**
      * Aliyun_Log_Models_DeleteLogstoreResponse constructor
      *
@@ -19,5 +19,5 @@ class DeleteLogstoreResponse extends \Aliyun\Log\Models\Response\Response {
     public function __construct($resp, $header) {
         parent::__construct ( $header );
     }
-
+    
 }

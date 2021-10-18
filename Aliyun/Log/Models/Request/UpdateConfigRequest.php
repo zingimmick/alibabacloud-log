@@ -2,7 +2,7 @@
 namespace Aliyun\Log\Models\Request;
 
 /**
- *
+ * 
  *
  * @author log service dev
  */
@@ -24,5 +24,5 @@ class UpdateConfigRequest extends \Aliyun\Log\Models\Request\Request {
     public function setConfig($config){
         $this->config = $config;
     }
-
+    
 }

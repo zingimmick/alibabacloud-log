@@ -26,8 +26,8 @@ class QueriedLog {
      * @var array log contents, content many key/value pair
      */
     private $contents;
-
-
+    
+    
     /**
      * Aliyun_Log_Models_QueriedLog constructor
      *
@@ -43,7 +43,7 @@ class QueriedLog {
         $this->source = $source;
         $this->contents = $contents; // deep copy
     }
-
+    
     /**
      * Get log source
      *
@@ -52,7 +52,7 @@ class QueriedLog {
     public function getSource() {
         return $this->source;
     }
-
+    
     /**
      * Get log time
      *
@@ -61,7 +61,7 @@ class QueriedLog {
     public function getTime() {
         return $this->time;
     }
-
+    
     /**
      * Get log contents, content many key/value pair.
      *

@@ -2,7 +2,7 @@
 namespace Aliyun\Log\Models\Request;
 
 /**
- *
+ * 
  *
  * @author log service dev
  */
@@ -24,5 +24,5 @@ class DeleteConfigRequest extends \Aliyun\Log\Models\Request\Request {
     public function setConfigName($configName){
         $this->configName=$configName;
     }
-
+    
 }

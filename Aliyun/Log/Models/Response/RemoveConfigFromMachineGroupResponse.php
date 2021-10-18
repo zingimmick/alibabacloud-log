@@ -7,7 +7,7 @@ namespace Aliyun\Log\Models\Response;
  * @author log service dev
  */
 class RemoveConfigFromMachineGroupResponse extends \Aliyun\Log\Models\Response\Response {
-
+    
     /**
      * Aliyun_Log_Models_Response constructor
      *
@@ -19,5 +19,5 @@ class RemoveConfigFromMachineGroupResponse extends \Aliyun\Log\Models\Response\R
     public function __construct($header) {
         parent::__construct ( $header );
     }
-
+   
 }

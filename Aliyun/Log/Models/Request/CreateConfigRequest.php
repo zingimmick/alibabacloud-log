@@ -2,7 +2,7 @@
 namespace Aliyun\Log\Models\Request;
 
 /**
- *
+ * 
  *
  * @author log service dev
  */
@@ -20,11 +20,11 @@ class CreateConfigRequest extends \Aliyun\Log\Models\Request\Request {
 
     public function getConfig(){
         return $this->config;
-
+        
     }
 
     public function setConfig($config){
         $this->config = $config;
     }
-
+    
 }

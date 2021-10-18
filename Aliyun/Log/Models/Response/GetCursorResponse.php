@@ -24,7 +24,7 @@ class GetCursorResponse extends \Aliyun\Log\Models\Response\Response {
         parent::__construct ( $header );
         $this->cursor = $resp['cursor'];
     }
-
+    
     /**
      * Get cursor from the response
      *
@@ -32,5 +32,5 @@ class GetCursorResponse extends \Aliyun\Log\Models\Response\Response {
      */
     public function getCursor(){
       return $this->cursor;
-    }
+    } 
 }

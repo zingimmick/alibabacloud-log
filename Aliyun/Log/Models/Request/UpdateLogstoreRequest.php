@@ -13,7 +13,7 @@ class UpdateLogstoreRequest extends \Aliyun\Log\Models\Request\Request{
     private  $shardCount;
     /**
      * Aliyun_Log_Models_UpdateLogstoreRequest constructor
-     *
+     * 
      * @param string $project project name
      */
     public function __construct($project=null,$logstore = null,$ttl = null,$shardCount = null) {

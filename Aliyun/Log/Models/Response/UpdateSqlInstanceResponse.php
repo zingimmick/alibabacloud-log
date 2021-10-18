@@ -7,7 +7,7 @@ namespace Aliyun\Log\Models\Response;
  * @author log service dev
  */
 class UpdateSqlInstanceResponse extends \Aliyun\Log\Models\Response\Response {
-
+    
     /**
      * Aliyun_Log_Models_UpdateSqlInstanceResponse constructor
      *
@@ -19,5 +19,5 @@ class UpdateSqlInstanceResponse extends \Aliyun\Log\Models\Response\Response {
     public function __construct($resp, $header) {
         parent::__construct ( $header );
     }
-
+    
 }

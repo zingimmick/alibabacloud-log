@@ -2,13 +2,13 @@
 namespace Aliyun\Log\Models\Request;
 
 /**
- *
+ * 
  *
  * @author log service dev
  */
 class UpdateMachineGroupRequest extends \Aliyun\Log\Models\Request\Request {
 
-    private $machineGroup;
+    private $machineGroup; 
     /**
      * Aliyun_Log_Models_UpdateMachineGroupRequest Constructor
      *
@@ -25,5 +25,5 @@ class UpdateMachineGroupRequest extends \Aliyun\Log\Models\Request\Request {
         $this->machineGroup = $machineGroup;
     }
 
-
+    
 }

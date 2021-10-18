@@ -6,7 +6,7 @@ namespace Aliyun\Log\Models\Response;
  * @author log service dev
  */
 class ListConfigsResponse extends \Aliyun\Log\Models\Response\Response {
-
+    
     private $total;
     private $configs;
     /**
@@ -20,7 +20,7 @@ class ListConfigsResponse extends \Aliyun\Log\Models\Response\Response {
     public function __construct($resp, $header) {
         parent::__construct ( $header );
         $this->size = $resp['total'];
-        $this->configs = $resp['configs'];
+        $this->configs = $resp['configs']; 
     }
 
     public function getSize(){
@@ -34,6 +34,6 @@ class ListConfigsResponse extends \Aliyun\Log\Models\Response\Response {
     public function getConfigs(){
       return $this->configs;
     }
-
+   
 
 }

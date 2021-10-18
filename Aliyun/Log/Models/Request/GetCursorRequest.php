@@ -2,17 +2,17 @@
 namespace Aliyun\Log\Models\Request;
 
 /**
- * The request used to get cursor by fromTime or begin/end mode
+ * The request used to get cursor by fromTime or begin/end mode 
  *
  * @author log service dev
  */
 class GetCursorRequest extends \Aliyun\Log\Models\Request\Request {
-
+    
     /**
      * @var string logstore name
      */
     private $logstore;
-
+    
     /**
      * @var string shard id
      */
@@ -24,13 +24,13 @@ class GetCursorRequest extends \Aliyun\Log\Models\Request\Request {
      *         begin:return cursor point to first loggroup
      *         end:return cursor point to position after last loggroup
      *         if $mode is set to not null,$fromTime must be set null
-     */
+     */        
     private $mode;
-
+    
     /**
      * @var integer unix_timestamp
-     *         return cursor point to first loggroup whose time after $fromTime
-     */
+     *         return cursor point to first loggroup whose time after $fromTime 
+     */        
     private $fromTime;
 
     /**
@@ -42,7 +42,7 @@ class GetCursorRequest extends \Aliyun\Log\Models\Request\Request {
      * @param string $shardId
      *            shard id
      * @param string $mode
-     *            query mode,value must be 'begin' or 'end'
+     *            query mode,value must be 'begin' or 'end' 
      * @param string $fromTime
      *            query by from time,unix_timestamp
      */
@@ -62,7 +62,7 @@ class GetCursorRequest extends \Aliyun\Log\Models\Request\Request {
     public function getLogstore(){
       return $this->logstore;
     }
-
+    
     /**
      * Set logstore name
      *
@@ -81,7 +81,7 @@ class GetCursorRequest extends \Aliyun\Log\Models\Request\Request {
     public function getShardId(){
       return $this->shardId;
     }
-
+    
     /**
      * Set shard id
      *
@@ -100,10 +100,10 @@ class GetCursorRequest extends \Aliyun\Log\Models\Request\Request {
     public function getMode(){
       return $this->mode;
     }
-
+    
     /**
      * Set mode
-     *
+     *  
      * @param string $mode
      *            value must be 'begin' or 'end'
      */

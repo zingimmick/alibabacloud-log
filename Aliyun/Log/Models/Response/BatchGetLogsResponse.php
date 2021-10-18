@@ -7,13 +7,13 @@ namespace Aliyun\Log\Models\Response;
  * @author log service dev
  */
 class BatchGetLogsResponse extends \Aliyun\Log\Models\Response\Response {
-
+    
     /**
      * @var array compressed Loggroup array
      */
     private $logPackageList;
     private $nextCursor;
-
+    
     /**
      * Aliyun_Log_Models_BatchGetLogsResponse constructor
      *
@@ -26,7 +26,7 @@ class BatchGetLogsResponse extends \Aliyun\Log\Models\Response\Response {
         parent::__construct ( $header );
         $this->logPackageList = $resp->getLogGroupListArray();
         $this->nextCursor = (isset($header['x-log-cursor']))?$header['x-log-cursor']:null;
-
+        
     }
 
     public function getLogPackageList(){
